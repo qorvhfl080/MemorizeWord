@@ -1,4 +1,4 @@
-package com.gecko.memorizeword
+package com.gecko.memorizeword.activity
 
 import android.content.Context
 import android.os.Bundle
