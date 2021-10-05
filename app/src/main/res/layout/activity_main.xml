@@ -37,10 +37,14 @@
         android:id="@+id/descriptionTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        tools:text="이 곳은 테스트 공간입니다."
         app:layout_constraintTop_toBottomOf="@id/titleTxt"
         app:layout_constraintStart_toStartOf="@id/guidelineLeft"
         app:layout_constraintEnd_toEndOf="@id/guidelineRight"
         android:layout_marginTop="10dp"/>
+
+
+
 
     <Button
         android:id="@+id/memorizeBtn"
@@ -49,13 +53,13 @@
         android:text="암기하기"
         app:layout_constraintStart_toStartOf="@id/guidelineLeft"
         app:layout_constraintEnd_toEndOf="@id/guidelineRight"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/vocabularyManageBtn"
         app:layout_constraintVertical_bias="0.7"
-        android:padding="20dp"/>
+        android:padding="20dp"
+        android:layout_marginBottom="10dp"/>
 
     <Button
-        android:id="@+id/Btn"
+        android:id="@+id/vocabularyManageBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="단어장 관리"
