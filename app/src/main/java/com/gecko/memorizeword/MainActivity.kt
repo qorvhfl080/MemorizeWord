@@ -2,6 +2,10 @@ package com.gecko.memorizeword
 
 import android.os.Bundle
 import com.gecko.memorizeword.databinding.ActivityMainBinding
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class MainActivity : BaseActivity() {
 
@@ -20,7 +24,19 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setValues() {
+        FirebaseDatabase.getInstance().getReference("test")
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    snapshot?.let {
+                        val data = snapshot.getValue()
+                        binding.descriptionTxt.text = data.toString()
+                    }
+                }
 
+                override fun onCancelled(error: DatabaseError) {
+                    error.toException().printStackTrace()
+                }
+            })
     }
 
 }
