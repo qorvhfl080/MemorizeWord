@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MemorizeWord">
         <activity
+            android:name=".activity.VocabularyActivity"
+            android:exported="true" />
+        <activity
             android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
