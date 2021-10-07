@@ -1,5 +1,6 @@
 package com.gecko.memorizeword.activity
 
+import android.content.Intent
 import android.os.Bundle
 import com.gecko.memorizeword.databinding.ActivityMainBinding
 import com.google.firebase.database.DataSnapshot
@@ -20,6 +21,13 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
+
+        binding.vocabularyManageBtn.setOnClickListener {
+
+            val intent = Intent(mContext, VocabularyActivity::class.java)
+            startActivity(intent)
+
+        }
 
     }
 
